@@ -41,6 +41,9 @@ public class App implements Callable<Integer> {
         Map<String, Object> data1 = parseFile(filepath1);
         Map<String, Object> data2 = parseFile(filepath2);
 
+        String resultDiff =  Differ.generate(data1, data2);
+        System.out.println(resultDiff);
+
         return 0;
     }
 
